@@ -15,7 +15,7 @@
         android:fontFamily="@font/coming_soon"
         android:shadowColor="#000000"
         android:shadowRadius="6"
-        android:text="Implemente juego aqui!"
+        android:text="Encuentra las parejas"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
