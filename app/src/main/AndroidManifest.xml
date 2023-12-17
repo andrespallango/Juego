@@ -13,9 +13,17 @@
         android:theme="@style/Theme.Juego"
         tools:targetApi="31">
         <activity
-            android:name=".Ganaste"
+            android:name=".JuegoConectar"
             android:exported="false"
             android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Menu"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Ganaste"
+            android:exported="false"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".Juego"
             android:exported="false"

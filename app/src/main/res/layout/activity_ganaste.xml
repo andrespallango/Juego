@@ -13,24 +13,47 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/coming_soon"
         android:shadowColor="#000000"
-        android:shadowRadius="6"
+        android:shadowRadius="20"
         android:text="Felicitaciones, Ganaste!"
         android:textColor="#FFFFFF"
         android:textSize="48sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.387" />
 
     <Button
         android:id="@+id/btnVolverAJugar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#B65C53"
+        android:fontFamily="@font/coming_soon"
         android:text="Jugar de nuevo"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.256"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.721" />
+        app:layout_constraintVertical_bias="0.738" />
+
+    <Button
+        android:id="@+id/bt_volver_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#B55C53"
+        android:fontFamily="@font/coming_soon"
+        android:text="Volver al menú"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.732"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.738" />
 </androidx.constraintlayout.widget.ConstraintLayout>
