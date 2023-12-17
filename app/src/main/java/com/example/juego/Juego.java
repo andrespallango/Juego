@@ -24,8 +24,6 @@ public class Juego extends AppCompatActivity {
         setContentView(R.layout.activity_juego);
 
         GridLayout gridLayout = findViewById(R.id.gridLayout);
-
-        // Crear una lista con dos etiquetas "aletra" y dos etiquetas "eletra"
         List<String> etiquetas = Arrays.asList("aletra", "aletra", "eletra", "eletra");
         Collections.shuffle(etiquetas);
 
@@ -34,12 +32,8 @@ public class Juego extends AppCompatActivity {
 
             if (childView instanceof ImageView) {
                 ImageView carta = (ImageView) childView;
-
-                // Asignar la etiqueta correspondiente de la lista
                 String etiqueta = etiquetas.get(i);
                 carta.setTag(etiqueta);
-
-                // Asignar la imagen de reversa.png como estado inicial
                 carta.setImageResource(R.drawable.reversa);
             }
         }
@@ -53,7 +47,6 @@ public class Juego extends AppCompatActivity {
         ImageView carta = (ImageView) view;
 
         if (carta.getDrawable().getConstantState() != getResources().getDrawable(R.drawable.reversa).getConstantState()) {
-            // La carta ya está volteada, no hagas nada
             return;
         }
 
@@ -70,15 +63,12 @@ public class Juego extends AppCompatActivity {
             Handler handler = new Handler();
             handler.postDelayed(() -> {
                 if (cartaSeleccionada.getTag().equals(carta.getTag())) {
-                    // Las cartas son iguales, déjalas volteadas
                     cartasVolteadas += 2;
                     if (cartasVolteadas == 4) {
-                        // Todas las cartas están volteadas, dirigirse a Ganaste.java
                         Intent intent = new Intent(Juego.this, Ganaste.class);
                         startActivity(intent);
                     }
                 } else {
-                    // Las cartas no son iguales, voltea ambas
                     carta.setImageResource(R.drawable.reversa);
                     cartaSeleccionada.setImageResource(R.drawable.reversa);
                 }
@@ -86,17 +76,16 @@ public class Juego extends AppCompatActivity {
                 // Restablece la carta seleccionada y desbloquea el input
                 cartaSeleccionada = null;
                 bloquearInput = false;
-            }, 1000); // Retraso antes de voltear las cartas
+            }, 1000); //
         }
     }
 
     private int obtenerIdImagen(String etiqueta) {
-        // Devuelve el ID de la imagen según la etiqueta
         if ("aletra".equals(etiqueta)) {
-            return R.drawable.aletra; // Reemplaza con el ID correcto de aletra.png
+            return R.drawable.aletra; //
         } else if ("eletra".equals(etiqueta)) {
-            return R.drawable.eletra; // Reemplaza con el ID correcto de eletra.png
+            return R.drawable.eletra; //
         }
-        return 0; // Puedes manejar un valor predeterminado o lanzar una excepción si es necesario
+        return 0;
     }
 }
