@@ -2,6 +2,8 @@ package com.example.juego;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.animation.Animator;
+import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -99,29 +101,36 @@ public class JuegoConectar extends AppCompatActivity {
                     btnA.setClickable(false);
                     btnE.setClickable(false);
                     // Mostrar la línea 1
-                    linea_1.setVisibility(View.VISIBLE);
+                    animateLine(linea_1);
                 }
                 break;
             case 'I':
                 if (aPresionada && ePresionada && !iPresionada) {
                     iPresionada = true;
                     // Mostrar la línea 2
-                    linea_2.setVisibility(View.VISIBLE);
+                    animateLine(linea_2);
                 }
                 break;
             case 'O':
                 if (aPresionada && ePresionada && iPresionada && !oPresionada) {
                     oPresionada = true;
                     // Mostrar la línea 3
-                    linea_3.setVisibility(View.VISIBLE);
+                    animateLine(linea_3);
                 }
                 break;
             case 'U':
                 if (aPresionada && ePresionada && iPresionada && oPresionada && !uPresionada) {
                     uPresionada = true;
 
-                    linea_4.setVisibility(View.VISIBLE);
-                    linea_5.setVisibility(View.VISIBLE);
+                    animateLine(linea_4);
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            // Este código se ejecutará después de 2 segundos
+                            // Aquí puedes colocar el código que deseas ejecutar después de la pausa
+                            animateLine(linea_5); // Por ejemplo, la animación de la línea 5
+                        }
+                    }, 500);
                     // Deshabilitar el botón 'U'
                     btnU.setEnabled(false);
 
@@ -138,4 +147,34 @@ public class JuegoConectar extends AppCompatActivity {
                 break;
         }
     }
+
+    public void animateLine(final ImageView linea) {
+        if (linea.getVisibility() == View.INVISIBLE) {
+            ObjectAnimator animator = ObjectAnimator.ofFloat(linea, "alpha", 0f, 1f);
+            animator.setDuration(500); // Duración de la animación en milisegundos
+            animator.addListener(new Animator.AnimatorListener() {
+                @Override
+                public void onAnimationStart(Animator animator) {
+                    linea.setVisibility(View.VISIBLE);
+                }
+
+                @Override
+                public void onAnimationEnd(Animator animator) {
+                    // Puedes realizar acciones al finalizar la animación si es necesario
+                }
+
+                @Override
+                public void onAnimationCancel(Animator animator) {
+                }
+
+                @Override
+                public void onAnimationRepeat(Animator animator) {
+                }
+            });
+            animator.start();
+        }
+    }
+
+
+
 }
