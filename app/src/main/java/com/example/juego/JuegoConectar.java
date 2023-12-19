@@ -128,6 +128,7 @@ public class JuegoConectar extends AppCompatActivity {
 
                     Intent intent = new Intent(JuegoConectar.this, Menu.class);
                     startActivity(intent);
+                    finish();
                 }
                 break;
         }
