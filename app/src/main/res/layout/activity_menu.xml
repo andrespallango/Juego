@@ -9,58 +9,60 @@
 
     <TextView
         android:id="@+id/textSeleccion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="388dp"
+        android:layout_height="155dp"
         android:fontFamily="@font/coming_soon"
         android:shadowColor="#000000"
         android:shadowRadius="20"
         android:text="¿Que deseas jugar hoy?"
-        android:textColor="#FFFFFF"
-        android:textSize="48sp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="45sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.047" />
+        app:layout_constraintVertical_bias="0.312" />
 
     <Button
         android:id="@+id/bt_memoria"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#BC4E4D"
+        android:backgroundTint="#13887D"
         android:fontFamily="@font/coming_soon"
         android:text="Memoria con vocales"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.218"
+        app:layout_constraintHorizontal_bias="0.259"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.538" />
+        app:layout_constraintVertical_bias="0.652" />
 
     <Button
         android:id="@+id/bt_conectar_vocal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#BB4E4D"
+        android:backgroundTint="#C8502B"
         android:fontFamily="@font/coming_soon"
         android:text="Conecta las vocales"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.79"
+        app:layout_constraintHorizontal_bias="0.779"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.539" />
+        app:layout_constraintVertical_bias="0.652" />
 
     <Button
         android:id="@+id/bt_atras"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#BA4E4D"
+        android:backgroundTint="#754AC1"
         android:fontFamily="@font/coming_soon"
         android:shadowColor="#000000"
         android:text="Regresar"
@@ -68,8 +70,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.816" />
+        app:layout_constraintVertical_bias="0.825" />
 </androidx.constraintlayout.widget.ConstraintLayout>

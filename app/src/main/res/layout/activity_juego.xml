@@ -4,19 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
     android:background="@drawable/ambiente"
+    android:orientation="horizontal"
     tools:context=".Juego">
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="187dp"
+        android:layout_height="67dp"
         android:fontFamily="@font/coming_soon"
         android:shadowColor="#000000"
         android:shadowRadius="6"
         android:text="Encuentra las parejas"
-        android:textColor="#FFFFFF"
+        android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,22 +25,22 @@
         app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.042" />
+        app:layout_constraintVertical_bias="0.5" />
 
     <GridLayout
         android:id="@+id/gridLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:columnCount="2"
-        android:rowCount="2"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:rowCount="2">
         <!-- Carta 1 -->
         <ImageView
             android:id="@+id/carta1"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
             android:clickable="true"
             android:onClick="voltearCarta"
             android:src="@drawable/reversa"
@@ -49,8 +50,8 @@
             android:id="@+id/carta2"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
             android:clickable="true"
             android:onClick="voltearCarta"
             android:src="@drawable/reversa"
@@ -60,8 +61,8 @@
             android:id="@+id/carta3"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
             android:clickable="true"
             android:onClick="voltearCarta"
             android:src="@drawable/reversa"
@@ -71,8 +72,8 @@
             android:id="@+id/carta4"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
             android:clickable="true"
             android:onClick="voltearCarta"
             android:src="@drawable/reversa"
