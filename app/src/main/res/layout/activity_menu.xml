@@ -17,14 +17,14 @@
         android:text="¿Que deseas jugar hoy?"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="45sp"
+        android:textSize="38sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498" />
+        app:layout_constraintVertical_bias="0.557" />
 
     <Button
         android:id="@+id/bt_memoria"
@@ -77,13 +77,13 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="254dp"
-        android:layout_height="159dp"
+        android:layout_width="221dp"
+        android:layout_height="131dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.019"
+        app:layout_constraintVertical_bias="0.167"
         app:srcCompat="@drawable/lulu" />
 </androidx.constraintlayout.widget.ConstraintLayout>

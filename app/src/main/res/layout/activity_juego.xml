@@ -8,10 +8,21 @@
     android:orientation="horizontal"
     tools:context=".Juego">
 
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="128dp"
+        android:layout_height="141dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/lulu" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="187dp"
         android:layout_height="67dp"
+        android:layout_marginTop="-120dp"
         android:fontFamily="@font/coming_soon"
         android:shadowColor="#000000"
         android:shadowRadius="6"

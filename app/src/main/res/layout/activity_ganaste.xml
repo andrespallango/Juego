@@ -59,12 +59,12 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="254dp"
-        android:layout_height="198dp"
+        android:layout_width="223dp"
+        android:layout_height="164dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.113"
         app:srcCompat="@drawable/lulu" />
 </androidx.constraintlayout.widget.ConstraintLayout>

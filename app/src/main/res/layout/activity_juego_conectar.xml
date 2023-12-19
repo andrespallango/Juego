@@ -9,8 +9,8 @@
 
     <TextView
         android:id="@+id/textencuentra"
-        android:layout_width="466dp"
-        android:layout_height="52dp"
+        android:layout_width="338dp"
+        android:layout_height="38dp"
         android:fontFamily="@font/coming_soon"
         android:shadowColor="#000000"
         android:shadowRadius="6"
@@ -21,10 +21,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.69"
+        app:layout_constraintHorizontal_bias="0.465"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.222" />
+        app:layout_constraintVertical_bias="0.211" />
 
     <Button
         android:id="@+id/bt_I"
@@ -160,14 +160,14 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="167dp"
-        android:layout_height="106dp"
+        android:layout_width="149dp"
+        android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.177"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.052"
+        app:layout_constraintVertical_bias="0.646"
         app:srcCompat="@drawable/lulu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
