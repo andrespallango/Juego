@@ -126,9 +126,8 @@ public class JuegoConectar extends AppCompatActivity {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            // Este código se ejecutará después de 2 segundos
-                            // Aquí puedes colocar el código que deseas ejecutar después de la pausa
-                            animateLine(linea_5); // Por ejemplo, la animación de la línea 5
+                            // Este código se ejecutará después de 2 segundo
+                            animateLine(linea_5);
                         }
                     }, 500);
                     // Deshabilitar el botón 'U'
@@ -160,7 +159,6 @@ public class JuegoConectar extends AppCompatActivity {
 
                 @Override
                 public void onAnimationEnd(Animator animator) {
-                    // Puedes realizar acciones al finalizar la animación si es necesario
                 }
 
                 @Override
