@@ -16,6 +16,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Reproducir el efecto de sonido saludo.mp3
+        reproducirSonidoSaludo();
+
         btnJugar = findViewById(R.id.bt_jugar);
         btnSalir = findViewById(R.id.bt_salir);
 
@@ -54,5 +58,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         // No detengas el MediaPlayer aquí, ya que queremos mantener la música en segundo plano.
+    }
+
+    private void reproducirSonidoSaludo() {
+        MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.saludo);
+        mediaPlayer.start();
+        mediaPlayer.setOnCompletionListener(MediaPlayer::release); // Libera recursos después de reproducir el sonido
     }
 }

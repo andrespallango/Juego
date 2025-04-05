@@ -1,6 +1,7 @@
 package com.example.juego;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -75,7 +76,7 @@ public class Juego extends AppCompatActivity {
         if (carta.getDrawable().getConstantState() != getResources().getDrawable(R.drawable.reversa).getConstantState()) {
             return;
         }
-
+        reproducirSonidoBoton();
         carta.setImageResource(obtenerIdImagen(carta.getTag().toString()));
 
         if (cartaSeleccionada == null) {
@@ -119,5 +120,10 @@ public class Juego extends AppCompatActivity {
             default:
                 return 0;
         }
+    }
+    private void reproducirSonidoBoton() {
+        MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.boton);
+        mediaPlayer.start();
+        mediaPlayer.setOnCompletionListener(MediaPlayer::release); // Libera recursos después de reproducir el sonido
     }
 }

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -86,6 +87,8 @@ public class JuegoConectar extends AppCompatActivity {
 
     // Método para verificar la letra presionada
     private void verificarLetraPresionada(char letra, Button boton) {
+        reproducirSonidoBoton();
+
         switch (letra) {
             case 'A':
                 if (!aPresionada && !ePresionada) {
@@ -173,6 +176,10 @@ public class JuegoConectar extends AppCompatActivity {
         }
     }
 
-
+    private void reproducirSonidoBoton() {
+        MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.boton);
+        mediaPlayer.start();
+        mediaPlayer.setOnCompletionListener(MediaPlayer::release); // Libera recursos después de reproducir el sonido
+    }
 
 }
